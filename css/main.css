@@ -1,0 +1,26 @@
+#board td{
+  margin: 0;
+  padding:0;
+  width: 5px;
+  height: 5px;
+}
+#board{
+    margin: auto;
+  }
+h1{
+  font-family: 'Lobster', cursive;
+}
+.cell{
+     background-color: white;
+}
+.live-cell{
+  background-color: crimson;
+}
+@media screen and (max-width: 400px){
+    #board td{
+      margin: 0;
+      padding:0;
+      width: 2px;
+      height: 2px;
+  }
+}

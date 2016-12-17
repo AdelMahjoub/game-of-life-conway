@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>game of life</title>
+</head>
+<body>
+    <div class="container">
+        <!--Banner / Header-->
+        <div class="row hidden-xs">
+            <div class="page-header text-center">
+                <h1 class="text-primary text-capitalize text-nowrap">conway's game of life</h1>
+            </div>        
+        </div>
+        <!--Navbar / Controls-->
+        <div class="row bg-primary text-center"> 
+            <div class="col-md-8 col-sm-8 col-lg-8 col-xs-12">
+                <!--Controls button group: start, stop, clear-->
+                <div class="btn-group">
+                    <button class="btn navbar-btn btn-sm btn-success text-uppercase" data-start>start</button>
+                    <button class="btn navbar-btn btn-sm btn-danger text-uppercase" data-stop>stop</button>
+                    <button class="btn navbar-btn btn-sm btn-warning text-uppercase" data-clear>clear</button>
+                </div>
+                <!--Random board button-->
+                <button class="btn btn-default btn-sm text-uppercase navbar-btn" data-random>random board</button>
+                <!--Speed button group-->
+                <div class="btn-group">
+                    <button class="btn btn-default navbar-btn btn-sm disabled" >speed</button>
+                    <button class="btn btn-default navbar-btn btn-sm" data-frames-down>-</button>
+                    <button class="btn btn-default navbar-btn btn-sm" data-farmes-up>+</button>
+                </div>
+            </div>
+            <!--Presets-->
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+                <form class="navbar-btn">
+                    <select class="form-control" data-presets>
+                        <option value="">-- PRESETS --</option>
+                        <option value="galaxy">Galaxy</option>
+                        <option value="rocket">Rocket</option>
+                        <option value="pulsar-1">Pulsar One</option>
+                        <option value="pulsar-2">Pulsar Two</option>
+                        <option value="clock">Clock</option>
+                        <option value="heavy-space-ship">Heavy Space Ship</option>
+                        <option value="glider-gun">Glider Gun</option>
+                        <option value="r-pentomino">R-Pentomino</option>
+                        <option value="a-corn">A-Corn</option>
+                    </select>
+                </form>
+            </div>
+        </div><!--END OF Navbar / Controls-->
+        <!--Divider horizontal line-->
+        <div class="row">
+            <hr>
+        </div>
+        <!--Table Board-->
+        <div class="row">
+            <table id="board" class="table-condensed table-bordered">
+            </table>
+        </div>
+        <!--Divider horizontal line-->
+        <div class="row">
+            <hr>
+        </div>
+        <!--Cells Monitor-->
+        <div class="row text-center">
+            <!--cells counter-->
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 well">
+                <span >Live Cells :</span>
+                <span class="text-danger" data-cells-counter></span>
+            </div>
+            <!--generation counter-->
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 well">
+                <span >Generation :</span>
+                <span class="text-info"data-generations-counter></span>
+            </div>
+        </div>
+        <!--Footer-->
+        <div class="row bg-primary text-center">
+            <!--github link-->
+            <button class="btn navbar-btn btn-sm text-uppercase" title="github">
+                <a href="https://github.com/AdelMahjoub" target="_blank">
+                    <span class="fa fa-github"></span>
+                </a>
+            </button>
+            <!--freecodecamp link-->
+            <button class="btn navbar-btn btn-sm text-uppercase" title="freecodecamp">
+                <a href="https://www.freecodecamp.com/adelmahjoub" target="_blank">
+                    <span class="fa fa-fire"></span>
+                </a>
+            </button>
+        </div>
+    </div>
+    <script src="./src/script.js"></script>
+</body>
+</html> 
