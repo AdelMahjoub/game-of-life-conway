@@ -1,8 +1,8 @@
 #board td{
   margin: 0;
   padding:0;
-  width: 5px;
-  height: 5px;
+  width: 7px;
+  height: 7px;
 }
 #board{
     margin: auto;
@@ -20,7 +20,7 @@ h1{
     #board td{
       margin: 0;
       padding:0;
-      width: 2px;
-      height: 2px;
+      width: 5px;
+      height: 5px;
   }
 }
